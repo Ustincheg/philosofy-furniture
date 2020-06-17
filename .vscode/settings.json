@@ -1,6 +1,0 @@
-{
-    "html-to-css-autocompletion.triggerCharacters": true,
-    "html-to-css-autocompletion.getSelectorsFromFileTypes": [
-        "html"
-    ]
-}
