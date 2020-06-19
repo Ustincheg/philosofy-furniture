@@ -682,6 +682,7 @@ footer a{
 }
 .bottom-wrapper__left-block address{
   margin: 0;
+  text-align: right;
 }
 
 .bottom-wrapper__left-block a,
@@ -1004,21 +1005,27 @@ footer a{
   display: inline-block;
   width: 19px;
   height: 19px;
-  background-image: url(../img/Телефон.svg)
+  margin-right: 5px;
+  background-image: url(../img/Телефон.svg);
+  background-repeat: no-repeat;
 }
 .bottom-wrapper__left-block .mail::before {
   content: "";
   display: inline-block;
-  width: 19px;
+  width: 22px;
   height: 19px;
-  background-image: url(../img/Почта.svg)
+  margin-right: 5px;
+  background-image: url(../img/Почта.svg);
+  background-repeat: no-repeat;
 }
 .bottom-wrapper__left-block .address::before {
   content: "";
   display: inline-block;
   width: 19px;
   height: 19px;
-  background-image: url(../img/Адрес.svg)
+  margin-right: 5px;
+  background-image: url(../img/Адрес.svg);
+  background-repeat: no-repeat;
 }
 .product-page{
   color: #0E2431;
