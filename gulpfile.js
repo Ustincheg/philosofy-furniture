@@ -13,6 +13,7 @@ gulp.task('server', function () {
 
 	gulp.watch('**/*.html', gulp.series('refresh'));
 	gulp.watch('**/*.css', gulp.series('refresh'));
+	gulp.watch('**/*.js', gulp.series('refresh'));
 })
 
 gulp.task('refresh', function (done) {

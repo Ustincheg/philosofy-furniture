@@ -18,11 +18,7 @@
 			<div class="content">
 				<div class="main-navigation__overall flex-it space-between">
 					<nav class="main-navigation flex-it">
-						<ul class="main-navigation__list flex-it space-between">
-							<li class="main-navigation__item-menu">
-								<button class="main-navigation__btn-menu closed" type="button">Меню<span class="main-navigation__icon">&#xf0c9;</span></button>
-								<button class="main-navigation__btn-menu opened" type="button">Меню<span class="main-navigation__icon">&#xf00d;</span></button>
-							</li>
+						<ul class="main-navigation__list closed flex-it space-between" id="header__menu">
 							<li><a href="catalog.html" aria-label="Перейти на страницу о кухнях">Кухни</a></li>
 							<li><a href="#" aria-label="Перейти на страницу о шкафах-купе">Шкафы-купе</a></li>
 							<li><a href="#"aria-label="Перейти на страницу детской мебели">Детские</a></li>
@@ -32,7 +28,7 @@
 							<li><a href="#" aria-label="Перейти на страницу о прочих товарах">Прочее</a></li>
 						</ul>
 					</nav>
-					<button class="btn header-btn" aria-label="Заказать звонок">Заказать звонок</button>				
+					<button class="btn header-btn closed" aria-label="Заказать звонок">Заказать звонок</button>				
 				</div>
 			</div>
 		</div>
@@ -46,6 +42,7 @@
 					<a href="tel:+79109980099" aria-label="Выполнить звонок по номеру 8 910 998 00 99">8(910)998-00-99</a>
 					<a href="tel:+79158366009" aria-label="Выполнить звонок по номеру 8 915 836 60 09">8(915)836-60-09</a>
 				</div>
+				<button class="header__btn-menu" id="header__btn-menu" type="button" aria-label="Открыть или закрыть выпадающее меню">&#xf0c9;</button>
 			</div>
 		</div>			
 	</header>
@@ -165,28 +162,28 @@
 			<div class="our-advantage__wrap">
 				<div class="content">
 					<div class="our-advantage__cell-wrapper row">
-						<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="our-advantage__cell col-lg-3 col-md-6 col-sm-12">
 							<div class="our-advantage__card">
 								<div class="our-advantage__card-image"></div>
 								<h3>Качественная фурнитура</h3>
 								<p>Прочная фурнитура от эконом до премиум класса от ведущих компаний отрасли</p>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="our-advantage__cell col-lg-3 col-md-6 col-sm-12">
 							<div class="our-advantage__card card2">
 								<div class="our-advantage__card-image"></div>
 								<h3>Широкий выбор фасадов</h3>							
 								<p>Разнообразие материалов, цветов, текстур на самый взыскательный вкус</p>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="our-advantage__cell col-lg-3 col-md-6 col-sm-12">
 							<div class="our-advantage__card card3">
 								<div class="our-advantage__card-image"></div>
 								<h3>Прочные столешницы</h3>
 								<p>Влагостойкие столешницы из ЛДСП представлены в 50+ вариантах</p>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="our-advantage__cell col-lg-3 col-md-6 col-sm-12">
 							<div class="our-advantage__card card4">
 								<div class="our-advantage__card-image"></div>
 								<h3>Все необходимые комплектующие</h3>
@@ -314,5 +311,6 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="js/app.js"></script>
+	<script src="js/header-menu-toggling.js"></script>
 </body>
 </html> 
