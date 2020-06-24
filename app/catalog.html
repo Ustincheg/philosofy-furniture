@@ -16,9 +16,9 @@
 	<header>
 		<div class="wrapper-for-navigation">
 			<div class="content">
-				<div class="flex-it space-between">
+				<div class="main-navigation__overall flex-it space-between">
 					<nav class="main-navigation flex-it">
-						<ul class="flex-it space-between">          
+						<ul class="main-navigation__list closed flex-it space-between" id="header__menu">        
 							<li><a href="#" aria-label="Перейти на страницу о кухнях">Кухни</a></li>
 							<li><a href="#" aria-label="Перейти на страницу о шкафах-купе">Шкафы-купе</a></li>
 							<li><a href="#" aria-label="Перейти на страницу о детской мебели">Детские</a></li>
@@ -28,20 +28,21 @@
 							<li><a href="#" aria-label="Перейти на страницу о прочих товарах">Прочее</a></li>
 						</ul>
 					</nav>
-					<button class="btn header-btn" aria-label="Заказать звонок">Заказать звонок</button>				
+					<button class="btn header-btn closed" aria-label="Заказать звонок">Заказать звонок</button>				
 				</div>
 			</div>
 		</div>
 		<div class="content">
 			<div class="hader-wrap-down flex-it space-between">
-				<a href="index.html" aria-label="Перейти на главную страницу">
+				<a class="header__logo" href="index.html" aria-label="Перейти на главную страницу">
 					<img src="img/Лого 1.png" alt="Философия мебели">
 				</a>
 				<p>Производство корпусной мебели на заказ <br> г. Иваново</p>
-				<div class="phone">
+				<div class="header__tel-numbers phone">
 					<a href="tel:+79109980099" aria-label="Выполнить звонок по номеру 8 910 998 00 99">8(910)998-00-99</a>
 					<a href="tel:+79158366009" aria-label="Выполнить звонок по номеру 8 915 836 60 09">8(915)836-60-09</a>
 				</div>
+				<button class="header__btn-menu" id="header__btn-menu" type="button" aria-label="Открыть или закрыть выпадающее меню">&#xf0c9;</button>
 			</div>
 		</div>			
 	</header>
@@ -67,7 +68,7 @@
 			</div>			
 		</section>
 		<section class="variant_of_solution">
-			<h2>Варианты решения кухни</h2>
+			<h2 class="section-ttl">Варианты решения кухни</h2>
 			<div class="content">
 				<div class="variant_of_solution__slider">
 					<input class="services-switcher_input modern visually-hidden" id="services-slider_input1" type="radio" name="services-slider-switcher" checked="">
@@ -79,7 +80,7 @@
 						<label for="services-slider_input3" class="services-slider_btn">Неоклассические</label>
 					</div>
 					<ul class="row list-modern">
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen_1.jpg" alt="кухня">
 								<div class="flex-it space-between">
@@ -99,7 +100,7 @@
 								<a href="product-page.html" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen_1.jpg" alt="кухня">
 								<div class="flex-it space-between">
@@ -119,7 +120,7 @@
 								<a href="#" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen_1.jpg" alt="кухня">
 								<div class="flex-it space-between">
@@ -139,7 +140,7 @@
 								<a href="#" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen_1.jpg" alt="кухня">
 								<div class="flex-it space-between">
@@ -159,7 +160,7 @@
 								<a href="#" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen_1.jpg" alt="кухня">
 								<div class="flex-it space-between">
@@ -179,7 +180,7 @@
 								<a href="#" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen_1.jpg" alt="кухня">
 								<div class="flex-it space-between">
@@ -201,7 +202,7 @@
 						</li>
 					</ul>
 					<ul class="row list-classic">
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen_2.png" alt="кухня">
 								<div class="flex-it space-between">
@@ -221,7 +222,7 @@
 								<a href="#" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen_2.png" alt="кухня">
 								<div class="flex-it space-between">
@@ -241,7 +242,7 @@
 								<a href="#" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen_2.png" alt="кухня">
 								<div class="flex-it space-between">
@@ -261,7 +262,7 @@
 								<a href="#" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen_2.png" alt="кухня">
 								<div class="flex-it space-between">
@@ -281,7 +282,7 @@
 								<a href="#" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen_2.png" alt="кухня">
 								<div class="flex-it space-between">
@@ -301,7 +302,7 @@
 								<a href="#" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen_2.png" alt="кухня">
 								<div class="flex-it space-between">
@@ -323,7 +324,7 @@
 						</li>
 					</ul>
 					<ul class="row list-neoclassic">
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen-3.jpg" alt="кухня">
 								<div class="flex-it space-between">
@@ -343,7 +344,7 @@
 								<a href="#" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen-3.jpg" alt="кухня">
 								<div class="flex-it space-between">
@@ -363,7 +364,7 @@
 								<a href="#" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen-3.jpg" alt="кухня">
 								<div class="flex-it space-between">
@@ -383,7 +384,7 @@
 								<a href="#" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen-3.jpg" alt="кухня">
 								<div class="flex-it space-between">
@@ -403,7 +404,7 @@
 								<a href="#" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen-3.jpg" alt="кухня">
 								<div class="flex-it space-between">
@@ -423,7 +424,7 @@
 								<a href="#" class="btn card-of-catalog__btn">Подробнее</a>
 							</article>
 						</li>
-						<li class="col-md-4">
+						<li class="col-lg-4 col-md-6">
 							<article class="card-of-catalog">
 								<img src="./img/kitchen-3.jpg" alt="кухня">
 								<div class="flex-it space-between">
@@ -448,10 +449,10 @@
 			</div>
 		</section>
 		<section class="section-with-form">
-			<h2>Разработаем дизайн-проект для вашего уюта</h2>
+			<h2 class="section-ttl">Разработаем дизайн-проект для вашего уюта</h2>
 			<div class="content row">
 				<div class="col-md-6 mycol">
-					<img src="./img/foto.jpg" alt="">
+					<img class="section-with-form__img" src="./img/foto.jpg" alt="">
 				</div>
 				<div class="col-md-6 mycol">
 					<div class="wrap-for-form">
@@ -473,10 +474,10 @@
 			</div>
 		</section>
 		<section class="constuctor">
-			<h2>Варианты решения кухни</h2>
+			<h2 class="section-ttl">Варианты решения кухни</h2>
 			<div class="content">
 				<div class="row myrow">
-					<div class="col-md-6 mycol">
+					<div class="select-window col-md-6 mycol">
 						<div class="wrap-for-select">
 							<div class="select flex-it">
 								<p>Материал столешницы</p>
@@ -524,7 +525,7 @@
 					<div class="col-md-6 mycol">
 						<div class="wrap-for-image second"></div>
 					</div>	
-					<div class="col-md-6 mycol">
+					<div class="metrics-window col-md-6 mycol">
 						<div class="wrap-for-input">
 							<label>Размер по длинной стороне см: <input type="number" aria-label="Поле для ввода размера по длинной стороне в сантиметрах"></label>
 							<label>Размер по короткой стороне см: <input type="number" aria-label="Поле для ввода размера по короткой стороне в сантиметрах"></label>
@@ -539,32 +540,32 @@
 		</section>
 		
 		<section class="our-advantage">
-			<h2>Наши преимущества</h2>
+			<h2 class="section-ttl">Наши преимущества</h2>
 			<div class="our-advantage__wrap">
 				<div class="content">
-					<div class="row">
-						<div class="col-lg-3 col-md-6 col-sm-12">
+					<div class="our-advantage__cell-wrapper row">
+						<div class="our-advantage__cell col-lg-3 col-md-6 col-sm-12">
 							<div class="our-advantage__card">
 								<div class="our-advantage__card-image"></div>
 								<h3>Качественная фурнитура</h3>
 								<p>Прочная фурнитура от эконом до премиум класса от ведущих компаний отрасли</p>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="our-advantage__cell col-lg-3 col-md-6 col-sm-12">
 							<div class="our-advantage__card card2">
 								<div class="our-advantage__card-image"></div>
 								<h3>Широкий выбор фасадов</h3>							
 								<p>Разнообразие материалов, цветов, текстур на самый взыскательный вкус</p>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="our-advantage__cell col-lg-3 col-md-6 col-sm-12">
 							<div class="our-advantage__card card3">
 								<div class="our-advantage__card-image"></div>
 								<h3>Прочные столешницы</h3>
 								<p>Влагостойкие столешницы из ЛДСП представлены в 50+ вариантах</p>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="our-advantage__cell col-lg-3 col-md-6 col-sm-12">
 							<div class="our-advantage__card card4">
 								<div class="our-advantage__card-image"></div>
 								<h3>Все необходимые комплектующие</h3>
@@ -576,11 +577,11 @@
 			</div>
 		</section>
 		<section class="last-our-works">
-			<h2>Последние выполненные проекты</h2>
+			<h2 class="section-ttl">Последние выполненные проекты</h2>
 			<div class="last-our-works__wrapper">
 				<div class="content">
 					<div class="row">
-						<div class="col-md-3 col-sm-12">
+						<div class="col-lg-3 col-md-6 col-sm-12">
 							<div class="content-centr"></div>
 							<article class="last-our-works__card">
 								<img src="./img/IMG_7732.jpg" alt="Пример выполненной работы" class="last-our-works__card-image">							
@@ -591,7 +592,7 @@
 								</div>
 							</article>
 						</div>
-						<div class="col-md-3 col-sm-12">
+						<div class="col-lg-3 col-md-6 col-sm-12">
 							<div class="content-centr"></div>
 							<article class="last-our-works__card">
 								<img src="./img/IMG_20200229_113412.jpg" alt="Пример выполненной работы" class="last-our-works__card-image">							
@@ -602,7 +603,7 @@
 								</div>
 							</article>						
 						</div>
-						<div class="col-md-3 col-sm-12">
+						<div class="col-lg-3 col-md-6 col-sm-12">
 							<div class="content-centr"></div>
 							<article class="last-our-works__card">
 								<img src="./img/2018-12-17 11.jpg" alt="Пример выполненной работы" class="last-our-works__card-image">							
@@ -613,7 +614,7 @@
 								</div>
 							</article>						
 						</div>
-						<div class="col-md-3 col-sm-12">
+						<div class="col-lg-3 col-md-6 col-sm-12">
 							<div class="content-centr"></div>
 							<article class="last-our-works__card">
 								<img src="./img/2019-08-09 12.jpg" alt="Пример выполненной работы" class="last-our-works__card-image">							
@@ -629,10 +630,10 @@
 			</div>
 		</section>
 		<footer>
-			<h2>Как к нам добраться</h2>
+			<h2 class="section-ttl">Как к нам добраться</h2>
 			<div class="content">
 				<div class="footer-bottom row">
-					<div class="col-md-6 foter-bottom__right-side flex-it">
+					<div class="col-lg-6 foter-bottom__right-side flex-it">
 						<ul class="flex-it foter_nav">
 							<li><a href="#" aria-label="Перейти на страницу о кухнях">Кухни</a></li>
 							<li><a href="#" aria-label="Перейти на страницу о шкафах-купе">Шкафы-купе</a></li>
@@ -646,6 +647,12 @@
 								<form action="get">
 									<input type="text" placeholder="ваше имя" aria-label="Поле для ввода имени">
 									<input type="tel" placeholder="телефон" aria-label="Поле для ввода телефона">
+									<div class="wrapper-for-checkbox container-fluid">
+										<input class="visually-hidden checkbox" id="bottom-wrapper__right-block-privacy-policy" type="checkbox" name="privacy-policy" aria-label="Подтвердить согласие с политикой конфиденциальности">
+										<label for="bottom-wrapper__right-block-privacy-policy">
+											<span class="quasi-checkbox"></span>согласен(на) с политикой конфиденциальности
+										</label>
+									</div>
 									<button class="btn btn-footer" aria-label="Заказать звонок">ЗАКАЗАТЬ ЗВОНОК</button>
 								</form>
 							</div>
@@ -662,8 +669,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6">
-						<img src="./img/map1.jpg" alt="">
+					<div class="col-lg-6">
+						<img class="footer__map" src="./img/map1.jpg" alt="">
 					</div>
 				</div>
 			</div>
@@ -673,5 +680,6 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="js/app.js"></script>
+	<script src="js/header-menu-toggling.js"></script>
 </body>
 </html> 
