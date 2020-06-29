@@ -81,25 +81,25 @@ ul {
 .main-navigation a {
   padding-bottom: 5px;
   font-size: 16px;
-  font-weight: bold;
   color: #000000;
+  text-shadow: 0 0 1px black;
 }
 
 .main-navigation a:hover {
   text-decoration: none;
-  font-weight: normal;
   color: #000000;
+  text-shadow: none;
 }
 
 .main-navigation a:active {
   text-decoration: none;
-  font-weight: normal;
+  text-shadow: none;
   color: #495C63;
 }
 
 .main-navigation a:not([href]) {
-  font-weight: bold;
   color: #000000;
+  text-shadow: 0 0 1px black;
   border-bottom: 2px solid #000000;
   cursor: default;
 }
@@ -1109,6 +1109,13 @@ footer a{
 .product-page{
   color: #0E2431;
 }
+
+.product-page__wrapper-for-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .product-page aside{
   max-width: 387px;
   padding-top: 31px;
@@ -1178,6 +1185,7 @@ footer a{
 	width: 100%;
 	min-height: 180px;
 	margin: auto;
+  cursor: ew-resize;
 }
 .slider-nav img{
   margin: 10px;
@@ -1201,13 +1209,15 @@ footer a{
 .slick-next{
 	right: 0;
 }
-.slider-wrap {
-  padding-bottom: 42px;
+
+
+
+
+.product-page__form-interactive {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-
-
-
-
 
 .product-page form input{
   border: none;
@@ -1242,11 +1252,19 @@ footer a{
   background-color: #FFFFFF;
 }
 
+.product-page__wrapper {
+  flex-wrap: nowrap;
+}
+
 /* ADAPTIVE */
 
 @media (max-width: 1199px) {
   .hader-wrap-down p {
     font-size: 2.5vw;
+  }
+
+  .main-banner__wrapper p {
+    max-width: 420px;
   }
 
   .section-ttl {
@@ -1300,6 +1318,22 @@ footer a{
   .constuctor .wrap-for-input label {
     font-size: 2vw;
   }
+
+  .product-page aside {
+    flex-grow: 1;
+    max-width: none;
+    margin-right: 20px;
+  }
+
+  .slider-wrap {
+    width: 60vw;
+    height: max-content;
+  }
+
+  .product-page form button {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1329,7 +1363,12 @@ footer a{
   }
 
   .main-banner__wrapper p {
-    font-size: 40px;  
+    max-width: 330px;
+    font-size: 40px;
+  }
+
+  .catalog .main-banner__wrapper p span:first-of-type {
+    font-size: 35px;
   }
 
   .card-of-catalog img {
@@ -1431,6 +1470,66 @@ footer a{
     margin: 0 auto;
   }
 
+  .product-page aside {
+    margin-right: 0;
+  }
+
+  .product-page__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-page__wrapper-for-desc {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .product-page .price {
+    min-width: max-content;
+    max-width: 35vw;
+    margin-right: 30px;
+  }
+
+  .product-page .product__name {
+    font-size: 4vw;
+  }
+
+  .product-page .product__price {
+    font-size: 5.8vw;
+    line-height: 6.9vw;
+  }
+
+  .product-page .product__description {
+    flex-grow: 1;
+  }
+
+  .product-page .product__description > h2 {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  .product-page__call-request {
+    min-width: 100%;
+  }
+
+  .product-page__form-interactive {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .product-page form input {
+    width: 30%;
+  }
+
+  .product-page form button {
+    width: 35%;
+  }
+
+  .slider-wrap {
+    width: 100%;
+  }
+
   .footer-bottom.row {
     padding: 20px 0 50px;
   }
@@ -1517,8 +1616,22 @@ footer a{
   }
 
   .main-banner__wrapper p {
+    max-width: 220px;
     font-size: 30px;
     line-height: 50px
+  }
+
+  .main-banner__wrapper p span:first-of-type,
+  .catalog .main-banner__wrapper p span:first-of-type {
+    font-size: 35px;
+  }
+
+  .main-banner__text-down {
+    font-size: 20px;
+  }
+
+  .banner-btn {
+    padding: 10px 20px;
   }
 
   .switcher-list {
@@ -1955,6 +2068,37 @@ footer a{
 
   .last-our-works__wrapper .content .row {
     width: 100%;
+  }
+
+  .product-page__wrapper-for-desc {
+    flex-direction: column;
+  }
+
+  .product-page .product__description > h2 {
+    padding-top: 20px;
+  }
+
+  .product-page .product__name {
+    font-size: 23px;
+  }
+
+  .product-page .product__price {
+    font-size: 33px;
+    line-height: 39px;
+  }
+
+  .product-page__form-interactive {
+    flex-direction: column;
+  }
+
+  .product-page form input {
+    width: 100%;
+    max-width: none;
+  }
+
+  .product-page form button {
+    width: 100%;
+    max-width: none;
   }
 
   footer .footer-bottom {
