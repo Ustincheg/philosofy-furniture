@@ -55,7 +55,13 @@ body{
 }
 
 .wrapper-for-navigation {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100vw;
   padding: 12px 0;
+  margin: 0 auto;
+  background-color: #FFFFFF;
   border-bottom: solid #DCDEE0 2px;
 }
 
@@ -106,6 +112,10 @@ ul {
 
 .main-navigation__item-menu {
   display: none;
+}
+
+header {
+  padding-top: 68px;
 }
 
 .btn {
@@ -664,13 +674,14 @@ footer a{
 }
 
 .foter_nav a:hover {
-  font-weight: bold;
+  text-shadow: 1px 0 0 #FFFFFF;
   color: #FFFFFF;
   text-decoration: none;
 }
 
 .foter_nav a:active,
 .foter_nav a:focus {
+  text-shadow: 1px 0 0 #FFFFFF;
   border-bottom: 2px solid #FFFFFF;
   outline: none;
 }
@@ -1475,7 +1486,7 @@ footer a{
   }
 
   .product-page__wrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 
@@ -1554,21 +1565,26 @@ footer a{
 }
 
 @media (max-width: 767px) {
+  header {
+    padding-top: 75px;
+  }
+
   .wrapper-for-navigation {
-    padding-top: 100px;
+    padding-top: 45px;
   }
 
   .header__logo {
     position: absolute;
-    top: 10px;
+    top: 100px;
     left: 10px;
     width: 120px;
   }
 
   .header__tel-numbers {
-    position: absolute;
+    position: fixed;
+    z-index: 1100;
     top: 10px;
-    right: 10px;
+    left: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1586,8 +1602,8 @@ footer a{
   }
 
   .header-btn {
-    position: absolute;
-    top: 45px;
+    position: fixed;
+    top: 10px;
     right: 10px;
     padding: 3px 5px;
   }
@@ -1599,11 +1615,13 @@ footer a{
   .main-navigation__list {
     justify-content: space-between;
     width: 100%;
+    max-width: none;
     min-width: 555px;
   }
 
   .hader-wrap-down p {
     margin: 0 auto;
+    margin-left: 28%;
     font-size: 20px;
   }
 
@@ -1787,11 +1805,11 @@ footer a{
   .header__tel-numbers {
     position: fixed;
     z-index: 1100;
+    right: 70px;
     width: 120px;
     flex-direction: column;
-    right: 70px;
-    margin: 0;
-    margin-left: calc(50px / 2 * -1);
+    margin: 0 auto;
+    margin-right: 0;
   }
 
   .wrapper-for-navigation {
@@ -1799,7 +1817,7 @@ footer a{
     z-index: 1000;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     min-width: 320px;
     height: 70px;
     padding: 0;
@@ -1882,7 +1900,8 @@ footer a{
   }
 
   .hader-wrap-down p {
-    padding-top: 70px;
+    margin: 0 auto;
+    padding-top: 0;
     font-size: 24px;
   }
 
