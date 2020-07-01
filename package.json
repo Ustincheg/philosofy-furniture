@@ -1,31 +1,20 @@
 {
-  "name": "philosofy-furniture",
+  "name": "test_1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "dependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-sass": "^4.1.0",
-    "pkg": "^4.4.8"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "test",
-    "start": "gulp start"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GeorgiiZhuravlev/philosofy-furniture.git"
+    "dev": "gulp"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GeorgiiZhuravlev/philosofy-furniture/issues"
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.1.0"
   },
-  "homepage": "https://github.com/GeorgiiZhuravlev/philosofy-furniture#readme"
+  "dependencies": {
+    "gulp-autoprefixer": "^6.0.0",
+    "pkg": "^4.4.8"
+  }
 }

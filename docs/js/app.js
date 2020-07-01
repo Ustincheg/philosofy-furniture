@@ -18,6 +18,7 @@
 // 		]
 //     })    
 // });
+
 $(document).ready(function(){
 	$('.slider-for').slick({
 		lazyLoad: 'ondemand',

@@ -1,24 +1,43 @@
-'use strict';
 
-var gulp = require('gulp');
-var server = require('browser-sync').create();
+var gulp     = require('gulp');
+browserSync  = require('browser-sync').create();
+sass         = require('gulp-sass');
+autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('server', function () {
-	server.init({
-		server: { baseDir: 'app/', index: 'index.html'},
-		notify: false,
-		open: true,
-		ui: false
-	});
+gulp.task('browser-sync',  async function() {
 
-	gulp.watch('**/*.html', gulp.series('refresh'));
-	gulp.watch('**/*.css', gulp.series('refresh'));
-	gulp.watch('**/*.js', gulp.series('refresh'));
-})
+browserSync.init({
+	server: "./docs"
+});
 
-gulp.task('refresh', function (done) {
-	server.reload();
-	done();
-})
+gulp.watch("app/**/*.+(htm|html)", gulp.series('html'));
+gulp.watch("app/**/*.js", gulp.series('js'));
+gulp.watch("app/img/*.*", gulp.series('img'));
+gulp.watch("app/css/*.*", gulp.series('css'));
+});
 
-gulp.task('start', gulp.series('server'));
+gulp.task('html', async function(){
+gulp.src('app/**/*.+(htm|html)')
+.pipe(gulp.dest('docs'))
+.pipe(browserSync.reload({stream:true}))
+});
+
+gulp.task('js', async function(){
+gulp.src('app/**/*.js')
+.pipe(gulp.dest('docs'))
+.pipe(browserSync.reload({stream:true}))
+});
+
+gulp.task('img', async function(){
+gulp.src('app/img/*.*')
+.pipe(gulp.dest('docs/img'))
+.pipe(browserSync.reload({stream:true}));
+});
+
+gulp.task('css', async function(){
+gulp.src('app/css/*.*')
+.pipe(gulp.dest('docs/css'))
+.pipe(browserSync.reload({stream:true}));
+});
+
+gulp.task('default', gulp.series('browser-sync'));
