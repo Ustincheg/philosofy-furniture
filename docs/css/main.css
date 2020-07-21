@@ -2257,6 +2257,10 @@ footer a{
   }
 }
 
+.section-with-form .section-with-form__img{
+  min-height: 567px;
+}
+
 /*section,
 article {
   outline: 1px solid red;

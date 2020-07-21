@@ -473,71 +473,101 @@
 				</div>
 			</div>
 		</section>
+
 		<section class="constuctor">
-			<h2 class="section-ttl">Варианты решения кухни</h2>
+			<h2>Варианты решения кухни</h2>
 			<div class="content">
-				<div class="row myrow">
-					<div class="select-window col-md-6 mycol">
-						<div class="wrap-for-select">
-							<div class="select flex-it">
-								<p>Материал столешницы</p>
-								<select name="" id="">
-									<option value="">Натуральный камень</option>
-									<option value="">Ненатуральный камень</option>
-									<option value="">Пластмасска</option>
-								</select>
-							</div>
-							<div class="select flex-it">
-								<p>Класс фурнитуры</p>
-								<select name="" id="">
-									<option value="">Эконом</option>
-									<option value="">Средняя</option>
-									<option value="">Лакшери</option>
-								</select>
-							</div>
-							<div class="select flex-it">
-								<p>Материал фасада</p>
-								<select name="" id="">
-									<option value="">МДФ</option>
-									<option value="">Пластик</option>
-									<option value="">Массив</option>
-								</select>
+				
+
+
+
+					<b>Тип дизайна:</b><br/>
+        <select onchange="calc()" id="type_design">
+            <option value="0">Выбрать</option>
+            <option value="5000">Простой дизайн сайта</option>
+            <option value="7000">Сложный дизайн сайта</option>
+            <option value="10000">Дизайн интернет-магазина</option>
+        </select><br/>
+        <input type="checkbox" onchange="calc()" value="3000" id="is_html" />
+        <label for="is_html">Требуется верстка?</label>
+        <br/>
+        Кол-во вариантов: <input type="text" id="count" value="1" onchange="calc()" />
+		<div>Стоимость дизайна сайта: <span id="result">0</span> руб.</div>		
+		<p>Стоимость по калькулятору: <span id="qwerqwe"></span></p>
+
+		
+
+					<div class="row myrow">
+						<div class="col-md-6 mycol">
+							<div class="wrap-for-select">
+								<div class="select flex-it">
+									<p>Материал фасада</p>
+									<select name="materialFacade" id="materialFacade" onchange="multiplier()">
+										<option value="10000">ЛДСП</option>
+										<option value="13000">МДФ в пленке ПВХ</option>
+										<option value="20000">МДФ в краске</option>
+										<option value="20000">Пластик</option>
+										<option value="25000">Акриловый пластик</option>
+										<option value="30000">Массив</option>
+									</select>
+								</div>
+								<div class="select flex-it">
+									<p>Материал столешницы</p>
+									<select name="tableTopMaterial" id="tableTopMaterial" onchange="multiplier()">
+										<option value="1">Пластик</option>
+										<option value="1.3">Акриловый камень 4 мм</option>
+										<option value="1.6">Акриловый камень 10 мм</option>
+									</select>
+								</div>
+								<div class="select flex-it">
+									<p>Класс фурнитуры</p>
+									<select name="hardwareClass" id="hardwareClass" onchange="multiplier()"> 
+										<option value="1">Эконом класс</option>
+										<option value="1.1">Средняя класс</option>
+										<option value="1.3">Премиум класс</option>
+									</select>
+								</div>
 							</div>
 						</div>
+
+
+
+						<div class="col-md-6 mycol">
+							<div class="wrap-for-image"></div>
+						</div>	
 					</div>
-					<div class="col-md-6 mycol">
-						<div class="wrap-for-image"></div>
-					</div>	
-				</div>
-				<div class="wrap-for-radio">
-					<input class="constuctor__type-of-kitchen visually-hidden" id="type-of-kitchen-1" type="radio" name="type-of-kitchen" checked="">
-					<input class="constuctor__type-of-kitchen visually-hidden" id="type-of-kitchen-2" type="radio" name="type-of-kitchen">
-					<input class="constuctor__type-of-kitchen visually-hidden" id="type-of-kitchen-3" type="radio" name="type-of-kitchen">
-					<input class="constuctor__type-of-kitchen visually-hidden" id="type-of-kitchen-4" type="radio" name="type-of-kitchen">
-					<div class="flex-it constructor__switcher-list">
-						<label for="type-of-kitchen-1" class="type-of-kitchen-label label-1"><span>П-образные</span></label>
-						<label for="type-of-kitchen-2" class="type-of-kitchen-label label-2"><span>Угловые</span></label>
-						<label for="type-of-kitchen-3" class="type-of-kitchen-label label-3"><span>Прямые</span></label>
-						<label for="type-of-kitchen-4" class="type-of-kitchen-label label-4"><span>С островом</span></label>
-					</div>
-				</div>
-				<div class="row myrow">
-					<div class="col-md-6 mycol">
-						<div class="wrap-for-image second"></div>
-					</div>	
-					<div class="metrics-window col-md-6 mycol">
-						<div class="wrap-for-input">
-							<label>Размер по длинной стороне см: <input type="number" aria-label="Поле для ввода размера по длинной стороне в сантиметрах"></label>
-							<label>Размер по короткой стороне см: <input type="number" aria-label="Поле для ввода размера по короткой стороне в сантиметрах"></label>
+					<div class="wrap-for-radio">
+						<input class="constuctor__type-of-kitchen visually-hidden radio-JS" value="1" id="type-of-kitchen-1" type="radio" name="type-of-kitchen" checked="">
+						<input class="constuctor__type-of-kitchen visually-hidden radio-JS" value="1.05" id="type-of-kitchen-2" type="radio" name="type-of-kitchen">
+						<input class="constuctor__type-of-kitchen visually-hidden radio-JS" value="1.1" id="type-of-kitchen-3" type="radio" name="type-of-kitchen">
+						<input class="constuctor__type-of-kitchen visually-hidden radio-JS" value="1.2" id="type-of-kitchen-4" type="radio" name="type-of-kitchen">
+						<div class="flex-it constructor__switcher-list">
+							<label for="type-of-kitchen-1" class="type-of-kitchen-label label-1"><span>П-образные</span></label>
+							<label for="type-of-kitchen-2" class="type-of-kitchen-label label-2"><span>Угловые</span></label>
+							<label for="type-of-kitchen-3" class="type-of-kitchen-label label-3"><span>Прямые</span></label>
+							<label for="type-of-kitchen-4" class="type-of-kitchen-label label-4"><span>С островом</span></label>
 						</div>
-					</div>	
-				</div>
-				<div class="wrapper-for-result">
-					<p>Стоимость изделия от: <span><b>85 454 руб.</b></span></p>
-					<button class="btn construcnor__btn" aria-label="Рассчитать точную стоимость">Рассчитать точную стоимость</button>
-				</div>
-			</div>	
+					</div>
+					<div class="row myrow">
+						<div class="col-md-6 mycol">
+							<div class="wrap-for-image second"></div>
+						</div>	
+						<div class="col-md-6 mycol">
+							<div class="wrap-for-input">
+								<label>Размер по длинной стороне см: <input type="number"></label>
+								<label>Размер по короткой стороне см: <input type="number"></label>
+							</div>
+						</div>	
+					</div>
+					<div class="wrapper-for-result">
+						<button class="btn construcnor__btn" onclick="constructorСalculation()">Расчитать стоимость</button>
+						<p>Стоимость изделия от: <span id="calcResult">10000</span> <b>руб.</b></p>
+						<button class="btn construcnor__btn">Вызвать замерщика</button>
+					</div>
+				
+			</div>
 		</section>
+		
 		
 		<section class="our-advantage">
 			<h2 class="section-ttl">Наши преимущества</h2>
